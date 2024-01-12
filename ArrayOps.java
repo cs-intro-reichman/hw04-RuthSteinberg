@@ -41,18 +41,21 @@ public class ArrayOps {
     public static int secondMaxValue(int [] array) {
         int max1=array[0];
         int max2=array[0];
+        int indexmax=0;
         for(int i=0; i<array.length; i++) // find the first max
         {
            if(max1<array[i])
            {
            max1=array[i];
+        indexmax=i;
            }
         }
         for(int j=0; j<array.length; j++) // find the second max
         {
-           if((max2<array[j])&&(array[j]<max1))
+           if((max2<array[j])&&(array[j]<=max1)&&(j!=indexmax))
            {
            max2=array[j];
+          
            }
         }
         return max2;
