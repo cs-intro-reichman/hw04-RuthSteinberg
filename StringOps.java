@@ -22,7 +22,7 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        System.out.println(capVowelsLowRest("one two"));
+        System.out.println(capVowelsLowRest("one two three world"));
         System.out.println(camelCase(" Intro to coMPUter sCIEncE" ));
         
     }
