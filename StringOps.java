@@ -22,7 +22,7 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        System.out.println(capVowelsLowRest("hello world"));
+        System.out.println(capVowelsLowRest("one two"));
         System.out.println(camelCase(" Intro to coMPUter sCIEncE" ));
         
     }
@@ -36,13 +36,15 @@ public class StringOps {
             {
                 newStr=newStr+(char)(string.charAt(i)-32);
             }
-            else if((ch>=64)&&(ch<=91))
+            else
+            {
+                if((ch>=64)&&(ch<=91))
             {
                 newStr=newStr+(char)(string.charAt(i)+32);
             }
-            else
-            {
+            else{
                 newStr=newStr+(char)(string.charAt(i));
+            }
             }
         }
         return newStr;
