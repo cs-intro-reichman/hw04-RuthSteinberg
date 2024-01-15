@@ -1,7 +1,7 @@
 public class ArrayOps {
     public static void main(String[] args) {
        // int [] array = Array.parseInt(args[0]);
-        System.out.println(findMissingInt(new int[] {3,1,2,4}));
+        System.out.println(findMissingInt(new int[] {3,2,1}));
         System.out.println(secondMaxValue(new int[] {1, -2, 3, -4, 5}));
         System.out.println(containsTheSameElements(new int[] {2,2,3,7,8,3,2}, new int[] {8,2,7,7,3}));
         System.out.println(isSorted(new int[] {4,3,2,1}));
@@ -33,6 +33,7 @@ public class ArrayOps {
             if(array[0]!=0)
             {
                 missNum=0;
+                break;
             }
             if((array[j+1]-array[j])>1)
             {
