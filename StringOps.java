@@ -32,7 +32,7 @@ public class StringOps {
         for(int i=0; i<string.length(); i++)
         {
             char ch = string.charAt(i);
-            if((ch==97)||(ch==101)||(ch==105)||(ch==111)||(ch==117)) //upper (a,e,i,o,u)
+            if((ch==97)||(ch==101)||(ch==105)||(ch==111)||((ch==117)&&(i!=0))) //upper (a,e,i,o,u)
             {
                 newStr=newStr+(char)(string.charAt(i)-32);
             }
@@ -42,7 +42,8 @@ public class StringOps {
             {
                 newStr=newStr+(char)(string.charAt(i)+32);
             }
-            else{
+            else
+            {
                 newStr=newStr+(char)(string.charAt(i));
             }
             }
