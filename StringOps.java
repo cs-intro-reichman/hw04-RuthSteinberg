@@ -123,11 +123,15 @@ public class StringOps {
             if(i!=0)
             {
             array[i]=num+num1+1; // array[0]=2 array[1]=0
+            num=num+num1;
             }
-            else array[i]=num;
+            else
+            { 
+                array[i]=num;
+                num1=num;
+            }
             temp=temp+1;
             string=string.substring(string.indexOf(chr)+1); // string=lo string=o
-            num1=num1+num;
             i=i+1;
         }
         int [] farray = new int [temp];
