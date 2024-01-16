@@ -24,7 +24,7 @@ public class StringOps {
     public static void main(String[] args) {
         System.out.println(capVowelsLowRest("one two three world"));
         System.out.println(camelCase(" Intro to coMPUter sCIEncE" ));
-        
+        System.out.println(allIndexOf("hello world", 'l'));
     }
     
     public static String capVowelsLowRest (String string) {
@@ -112,7 +112,17 @@ public class StringOps {
  return str;
 }
     public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+        int num;
+        int length=string.length();
+        int [] array = new int[length];
+        int i=0;
+        while (string.indexOf(chr)>=0) {
+            num = (int)(string.indexOf(chr)); //'hello' num=2 num=0
+            array[i]=num; // array[0]=2 array[1]=0
+            string=string.substring(string.indexOf(chr)+1, string.length()-1); // string=lo string=o
+            i=i+1;
+        }
+        return array;
     }
 }
+
