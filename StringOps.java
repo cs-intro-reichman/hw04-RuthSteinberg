@@ -117,10 +117,9 @@ public class StringOps {
         int [] array = new int[length];
         int temp=0;
         int i=0;
-        int num1;
+        int num1=(int)(string.indexOf(chr));
         while (string.indexOf(chr)>=0) {
             num = (int)(string.indexOf(chr)); //'hello' num=2 num=0
-            num1 = num;
             if(i!=0)
             {
             array[i]=num+num1+1; // array[0]=2 array[1]=0
@@ -128,6 +127,7 @@ public class StringOps {
             else array[i]=num;
             temp=temp+1;
             string=string.substring(string.indexOf(chr)+1); // string=lo string=o
+            num1=num;
             i=i+1;
         }
         int [] farray = new int [temp];
