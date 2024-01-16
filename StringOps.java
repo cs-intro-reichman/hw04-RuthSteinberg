@@ -123,7 +123,7 @@ public class StringOps {
             if(i!=0)
             {
             array[i]=num+num1+1; // array[0]=2 array[1]=0
-            num=num+num1;
+            num=num+num1+1;
             }
             else
             { 
