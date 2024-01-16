@@ -115,14 +115,21 @@ public class StringOps {
         int num;
         int length=string.length();
         int [] array = new int[length];
+        int temp=0;
         int i=0;
         while (string.indexOf(chr)>=0) {
             num = (int)(string.indexOf(chr)); //'hello' num=2 num=0
             array[i]=num; // array[0]=2 array[1]=0
-            string=string.substring(string.indexOf(chr)+1, string.length()-1); // string=lo string=o
+            temp=temp+1;
+            string=string.substring(string.indexOf(chr)+1); // string=lo string=o
             i=i+1;
         }
-        return array;
+        int [] farray = new int [temp];
+        for(int j=0; j<temp; j++)
+        {
+            farray[j]=array[j];
+        }
+        return farray;
     }
 }
 
