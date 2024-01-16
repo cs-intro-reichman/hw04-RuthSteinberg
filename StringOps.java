@@ -127,7 +127,7 @@ public class StringOps {
             else array[i]=num;
             temp=temp+1;
             string=string.substring(string.indexOf(chr)+1); // string=lo string=o
-            num1=num;
+            num1=num1+num;
             i=i+1;
         }
         int [] farray = new int [temp];
