@@ -38,7 +38,7 @@ public class StringOps {
             }
             else
             {
-                if((ch>=64)&&(ch<=91)||(ch!=79))
+                if((ch>=64)&&(ch<=91))
             {
                 newStr=newStr+(char)(string.charAt(i)+32);
             }
