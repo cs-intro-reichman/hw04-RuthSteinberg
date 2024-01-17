@@ -67,20 +67,19 @@ public class ArrayOps {
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
-        boolean answer=false;
-        if(array1.length<array2.length)
-        {
+        boolean answer1=false;
+        boolean answer2=false;
         for(int i=0; i<array1.length; i++)
         {
             for(int j=0; j<array2.length; j++)
             {
                 if(array1[i]==array2[j])
                 {
-                  answer=true;
+                  answer1=true;
                   break;  
                 }
                 else
-                {answer=false;}
+                {answer1=false;}
             }
         }
         for(int k=0; k<array2.length; k++)
@@ -89,31 +88,36 @@ public class ArrayOps {
             {
                 if(array2[k]==array1[w])
                 {
-                  answer=true;
+                  answer2=true;
                   break;  
                 }
                 else
-                {answer=false;}
+                {answer2=false;}
             }
         }
+        if((answer1==true)&&(answer2==true))
+        {
+            return true;
+        }
+        else return false;
 
     }
-    else{
-        for(int i=0; i<array2.length; i++)
-        {
-            for(int j=0; j<array1.length; j++)
-            {
-                if(array2[i]==array1[j])
-                {
-                  answer=true; 
-                  break; 
-                }
-                else{answer=false;}
-            }
-        }
-    }
-        return answer;
-    }
+
+   // else{
+     //   for(int i=0; i<array2.length; i++)
+       // {
+         //   for(int j=0; j<array1.length; j++)
+           // {
+             //   if(array2[i]==array1[j])
+               // {
+                 // answer=true; 
+                  //break; 
+                //}
+                //else{answer=false;}
+            //}
+        //}
+    //}
+    
 
 
     public static boolean isSorted(int [] array) {
