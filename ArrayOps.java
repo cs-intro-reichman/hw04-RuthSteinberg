@@ -83,6 +83,20 @@ public class ArrayOps {
                 {answer=false;}
             }
         }
+        for(int k=0; k<array2.length; k++)
+        {
+            for(int w=0; w<array1.length; w++)
+            {
+                if(array2[k]==array1[w])
+                {
+                  answer=true;
+                  break;  
+                }
+                else
+                {answer=false;}
+            }
+        }
+
     }
     else{
         for(int i=0; i<array2.length; i++)
